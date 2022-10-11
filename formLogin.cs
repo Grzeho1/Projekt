@@ -49,8 +49,8 @@ namespace Projekt
                     login = textBoxLogin.Text;
                     heslo = textBoxHeslo.Text;
 
-                    uzivatel.Login=login;
-                    
+                    Uzivatel.Login=login;
+                    Uzivatel.Heslo=heslo;
 
 
                     Form1 nextForm = new Form1();

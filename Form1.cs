@@ -52,7 +52,7 @@ namespace Projekt
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            labelJmeno.Text = uzivatel.Login;
+            labelJmeno.Text = Uzivatel.Login;
         }
 
         private void tlacitkoDomu_Click(object sender, EventArgs e)

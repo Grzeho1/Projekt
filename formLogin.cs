@@ -50,7 +50,7 @@ namespace Projekt
                     heslo = textBoxHeslo.Text;
 
                     Uzivatel.Login=login;
-                    Uzivatel.Heslo=heslo;
+                   
 
 
                     Form1 nextForm = new Form1();

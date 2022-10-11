@@ -103,6 +103,11 @@ namespace Projekt
             tlacitkoNastaveni.BackColor = Color.FromArgb(46, 51, 73);
 
             labelNazev.Text = "Nastavení";
+            this.panelHlavni.Controls.Clear();
+            formNastaveni formNastaveni = new formNastaveni() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            formNastaveni.FormBorderStyle = FormBorderStyle.None;
+            this.panelHlavni.Controls.Add(formNastaveni);
+            formNastaveni.Show();   
         }
 
         private void tlacitkoKalendar_Click(object sender, EventArgs e)

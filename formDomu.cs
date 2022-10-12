@@ -23,13 +23,13 @@ namespace Projekt
         {
             casovac.Start();
             InitBrowser();
-          
+
         }
 
         private void casovac_Tick(object sender, EventArgs e)
         {
-            labelHodiny.Text = DateTime.Now.ToString("dd.  MMMM  H:mm:ss") ;
-            
+            labelHodiny.Text = DateTime.Now.ToString("dd.  MMMM  H:mm:ss");
+
         }
 
         private async Task initizated()
@@ -39,9 +39,18 @@ namespace Projekt
         public async void InitBrowser()
         {
             await initizated();
-            webView21.CoreWebView2.Navigate("https://www.pangandaran.wz.sk/");
+            webView21.CoreWebView2.Navigate("https://www.google.com/");
         }
 
-        
+        void Pocasi()
+        {
+            using (WebClient web = new WebClient())
+            {
+
+                string url = string.Format("https://api.openweathermap.org/data/3.0/onecall?lat=39.31&lon=-74.5&exclude=hourly&appid=784dce9177341e93f289398169ac9fa4");
+                var json = web.DownloadString(url);
+               
+         }
+        }
     }
 }

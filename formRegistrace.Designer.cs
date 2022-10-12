@@ -84,16 +84,20 @@
             this.textBoxHeslo.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.textBoxHeslo.Location = new System.Drawing.Point(42, 138);
             this.textBoxHeslo.Name = "textBoxHeslo";
+            this.textBoxHeslo.PasswordChar = '*';
             this.textBoxHeslo.Size = new System.Drawing.Size(267, 23);
-            this.textBoxHeslo.TabIndex = 1;
+            this.textBoxHeslo.TabIndex = 2;
+            this.textBoxHeslo.UseSystemPasswordChar = true;
             // 
             // textBoxPotvrzeni
             // 
             this.textBoxPotvrzeni.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.textBoxPotvrzeni.Location = new System.Drawing.Point(42, 204);
             this.textBoxPotvrzeni.Name = "textBoxPotvrzeni";
+            this.textBoxPotvrzeni.PasswordChar = '*';
             this.textBoxPotvrzeni.Size = new System.Drawing.Size(267, 23);
-            this.textBoxPotvrzeni.TabIndex = 1;
+            this.textBoxPotvrzeni.TabIndex = 3;
+            this.textBoxPotvrzeni.UseSystemPasswordChar = true;
             // 
             // tlacitkoRegistruj
             // 

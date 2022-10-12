@@ -5,6 +5,23 @@ namespace Projekt
 {
     public partial class Form1 : Form
     {
+        
+        private const int WM_NCHITTEST = 0x84;
+        private const int HTCLIENT = 0x1;
+        private const int HTCAPTION = 0x2;
+
+        ///*********
+        /// Povoluje pohyb s oknem
+        ///
+        protected override void WndProc(ref Message message)
+        {
+            base.WndProc(ref message);
+
+            if (message.Msg == WM_NCHITTEST && (int)message.Result == HTCLIENT)
+                message.Result = (IntPtr)HTCAPTION;
+        }
+
+        //*********
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
 

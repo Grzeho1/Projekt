@@ -24,8 +24,10 @@ namespace Projekt
 
         private void tlacitkoZmenaHesla_Click(object sender, EventArgs e)
         {
+            string heslo = Uzivatel.Heslo;
+            
 
-            if (textBoxNoveHeslo.Text == textBoxTestNoveHeslo.Text)
+            if (textBoxNoveHeslo.Text == textBoxTestNoveHeslo.Text && heslo==textBoxAktualHeslo.Text)
             {
 
                 String querry = "UPDATE Login SET heslo = '" + textBoxNoveHeslo.Text + "' WHERE login = '" + Uzivatel.Login + "'";

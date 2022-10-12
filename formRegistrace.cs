@@ -44,11 +44,13 @@ namespace Projekt
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
 
-
+                    
                     MessageBox.Show("Registrace proběhla uspěšně", ":)", MessageBoxButtons.OK);
                     textBoxHeslo.Clear();
                     textBoxLogin.Clear();
                     textBoxPotvrzeni.Clear();
+                    
+                  
                     
                 }
                 else

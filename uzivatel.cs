@@ -10,11 +10,11 @@ namespace Projekt
     {
         static string login;
         static string heslo;
-        static string noveheslo;
+        
 
         public static string Login
         {
-            
+
             get
             {
                 return login;
@@ -25,9 +25,14 @@ namespace Projekt
                 login = value;
             }
         }
-        
+        public static string Heslo
+        {
+            get { return heslo; }
+            set { heslo = value; }
 
-       
+
+
+        }
     }
 
     

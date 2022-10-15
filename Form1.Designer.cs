@@ -43,11 +43,9 @@
             this.labelNazev = new System.Windows.Forms.Label();
             this.panelHlavni = new System.Windows.Forms.Panel();
             this.tlacitkoExit = new System.Windows.Forms.Button();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panelHlavni.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -232,7 +230,6 @@
             // 
             // panelHlavni
             // 
-            this.panelHlavni.Controls.Add(this.maskedTextBox1);
             this.panelHlavni.Location = new System.Drawing.Point(187, 71);
             this.panelHlavni.Name = "panelHlavni";
             this.panelHlavni.Size = new System.Drawing.Size(752, 494);
@@ -249,13 +246,6 @@
             this.tlacitkoExit.TabIndex = 4;
             this.tlacitkoExit.UseVisualStyleBackColor = false;
             this.tlacitkoExit.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(66, 232);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 23);
-            this.maskedTextBox1.TabIndex = 0;
             // 
             // Form1
             // 
@@ -276,8 +266,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panelHlavni.ResumeLayout(false);
-            this.panelHlavni.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -299,6 +287,5 @@
         private Label labelJmeno;
         private Button tlacitkoKrypto;
         private Button tlacitkoExit;
-        private MaskedTextBox maskedTextBox1;
     }
 }

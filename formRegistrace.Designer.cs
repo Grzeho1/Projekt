@@ -36,6 +36,7 @@
             this.textBoxPotvrzeni = new System.Windows.Forms.TextBox();
             this.tlacitkoRegistruj = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.labelError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -104,7 +105,7 @@
             this.tlacitkoRegistruj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tlacitkoRegistruj.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tlacitkoRegistruj.ForeColor = System.Drawing.Color.SteelBlue;
-            this.tlacitkoRegistruj.Location = new System.Drawing.Point(91, 251);
+            this.tlacitkoRegistruj.Location = new System.Drawing.Point(89, 276);
             this.tlacitkoRegistruj.Name = "tlacitkoRegistruj";
             this.tlacitkoRegistruj.Size = new System.Drawing.Size(159, 41);
             this.tlacitkoRegistruj.TabIndex = 3;
@@ -127,12 +128,24 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // labelError
+            // 
+            this.labelError.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelError.AutoSize = true;
+            this.labelError.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelError.ForeColor = System.Drawing.Color.Red;
+            this.labelError.Location = new System.Drawing.Point(89, 244);
+            this.labelError.Name = "labelError";
+            this.labelError.Size = new System.Drawing.Size(0, 21);
+            this.labelError.TabIndex = 5;
+            // 
             // formRegistrace
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(351, 416);
+            this.Controls.Add(this.labelError);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tlacitkoRegistruj);
             this.Controls.Add(this.textBoxPotvrzeni);
@@ -159,5 +172,6 @@
         private TextBox textBoxPotvrzeni;
         private Button tlacitkoRegistruj;
         private Button button1;
+        private Label labelError;
     }
 }

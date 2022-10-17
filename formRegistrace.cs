@@ -76,7 +76,7 @@ namespace Projekt
 
                     if (checkLogin() == true)
                     {
-                        MessageBox.Show("Uzivatel už existuje", "chyba", MessageBoxButtons.OK);
+                        labelError.Text = "Uzivatel uz existuje";
                     }
                     else if(login == "" || heslo == "")
                     {
@@ -106,16 +106,13 @@ namespace Projekt
 
 
                 }
-               
-                
-                
-                
+                  
             }
             
-            catch
+            catch (Exception)
             {
                 MessageBox.Show("Chyba spojení", "Chyba", MessageBoxButtons.OK);
-
+                
             }
             finally
             {

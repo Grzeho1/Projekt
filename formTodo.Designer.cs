@@ -28,17 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formTodo));
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tlacitkoPridejItem = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // panel1
             // 
-            this.button1.Location = new System.Drawing.Point(312, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.panel1.AutoScroll = true;
+            this.panel1.Location = new System.Drawing.Point(181, 27);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(527, 387);
+            this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // tlacitkoPridejItem
+            // 
+            this.tlacitkoPridejItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.tlacitkoPridejItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tlacitkoPridejItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.tlacitkoPridejItem.Image = ((System.Drawing.Image)(resources.GetObject("tlacitkoPridejItem.Image")));
+            this.tlacitkoPridejItem.Location = new System.Drawing.Point(71, 27);
+            this.tlacitkoPridejItem.Name = "tlacitkoPridejItem";
+            this.tlacitkoPridejItem.Size = new System.Drawing.Size(104, 107);
+            this.tlacitkoPridejItem.TabIndex = 2;
+            this.tlacitkoPridejItem.UseVisualStyleBackColor = true;
+            this.tlacitkoPridejItem.Click += new System.EventHandler(this.tlacitkoPridejItem_Click);
             // 
             // formTodo
             // 
@@ -46,7 +61,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(733, 477);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.tlacitkoPridejItem);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formTodo";
             this.Text = "formTodo";
@@ -55,7 +71,7 @@
         }
 
         #endregion
-
-        private Button button1;
+        private Panel panel1;
+        private Button tlacitkoPridejItem;
     }
 }

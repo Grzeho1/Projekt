@@ -16,21 +16,16 @@ namespace Projekt
         {
 
             get
-            {
-                return login;
-
-            }
+            { return login;  }
             set
-            {
-                login = value;
-            }
+            { login = value;  }
         }
         public static string Heslo
         {
             get { return heslo; }
             set { heslo = value; }
         }
-
+         
         
     }
 

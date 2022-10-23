@@ -58,11 +58,16 @@
             // 
             // textBoxTodo
             // 
+            this.textBoxTodo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.textBoxTodo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxTodo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxTodo.ForeColor = System.Drawing.SystemColors.Highlight;
             this.textBoxTodo.Location = new System.Drawing.Point(12, 401);
             this.textBoxTodo.Multiline = true;
             this.textBoxTodo.Name = "textBoxTodo";
             this.textBoxTodo.Size = new System.Drawing.Size(599, 64);
             this.textBoxTodo.TabIndex = 3;
+            this.textBoxTodo.TextChanged += new System.EventHandler(this.textBoxTodo_TextChanged);
             // 
             // formTodo
             // 
@@ -76,6 +81,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formTodo";
             this.Text = "formTodo";
+            this.Load += new System.EventHandler(this.formTodo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

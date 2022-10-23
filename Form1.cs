@@ -10,6 +10,8 @@ namespace Projekt
         private const int HTCLIENT = 0x1;
         private const int HTCAPTION = 0x2;
 
+        formTodo formTd;
+
         ///*********
         /// Povoluje pohyb s oknem
         ///
@@ -35,6 +37,7 @@ namespace Projekt
             int nHeightElliepse
 
             );
+
         public Form1()
         {
             InitializeComponent();
@@ -94,10 +97,14 @@ namespace Projekt
 
         private void tlacitkoTodo_Click(object sender, EventArgs e)
         {
+
             panelNavigace.Height = tlacitkoTodo.Height;
             panelNavigace.Top = tlacitkoTodo.Top;
             panelNavigace.Left = tlacitkoTodo.Left;
             tlacitkoTodo.BackColor = Color.FromArgb(46, 51, 73);
+
+
+
 
             labelNazev.Text = "ToDo";
             this.panelHlavni.Controls.Clear();

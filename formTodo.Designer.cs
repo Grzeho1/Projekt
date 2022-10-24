@@ -32,6 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tlacitkoPridejItem = new System.Windows.Forms.Button();
             this.textBoxTodo = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // panel1
@@ -39,7 +40,7 @@
             this.panel1.AutoScroll = true;
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(709, 343);
+            this.panel1.Size = new System.Drawing.Size(599, 343);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -69,12 +70,20 @@
             this.textBoxTodo.TabIndex = 3;
             this.textBoxTodo.TextChanged += new System.EventHandler(this.textBoxTodo_TextChanged);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(389, 372);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(222, 23);
+            this.dateTimePicker1.TabIndex = 4;
+            // 
             // formTodo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(733, 477);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.textBoxTodo);
             this.Controls.Add(this.tlacitkoPridejItem);
             this.Controls.Add(this.panel1);
@@ -91,5 +100,6 @@
         private Panel panel1;
         private Button tlacitkoPridejItem;
         private TextBox textBoxTodo;
+        private DateTimePicker dateTimePicker1;
     }
 }

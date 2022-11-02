@@ -79,7 +79,7 @@
             this.tlacitkoKrypto.Name = "tlacitkoKrypto";
             this.tlacitkoKrypto.Size = new System.Drawing.Size(181, 63);
             this.tlacitkoKrypto.TabIndex = 3;
-            this.tlacitkoKrypto.Text = "Krypto";
+            this.tlacitkoKrypto.Text = "Mail";
             this.tlacitkoKrypto.UseVisualStyleBackColor = true;
             this.tlacitkoKrypto.Click += new System.EventHandler(this.tlacitkoKrypto_Click);
             this.tlacitkoKrypto.Leave += new System.EventHandler(this.tlacitkoKrypto_Leave);

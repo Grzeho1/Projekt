@@ -161,12 +161,17 @@ namespace Projekt
 
         private void tlacitkoKrypto_Click(object sender, EventArgs e)
         {
-            panelNavigace.Height = tlacitkoKrypto.Height;
-            panelNavigace.Top = tlacitkoKrypto.Top;
-            panelNavigace.Left = tlacitkoKrypto.Left;
-            tlacitkoKrypto.BackColor = Color.FromArgb(46, 51, 73);
+            panelNavigace.Height = tlacitkoNastaveni.Height;
+            panelNavigace.Top = tlacitkoNastaveni.Top;
+            panelNavigace.Left = tlacitkoNastaveni.Left;
+            tlacitkoNastaveni.BackColor = Color.FromArgb(46, 51, 73);
 
-            labelNazev.Text = "Krypto";
+            labelNazev.Text = "Email";
+            this.panelHlavni.Controls.Clear();
+            formMail formMail = new formMail() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            formMail.FormBorderStyle = FormBorderStyle.None;
+            this.panelHlavni.Controls.Add(formMail);
+            formMail.Show();
         }
 
         private void tlacitkoKrypto_Leave(object sender, EventArgs e)

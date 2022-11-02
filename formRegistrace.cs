@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
@@ -60,10 +61,11 @@ namespace Projekt
 
         private void tlacitkoRegistruj_Click(object sender, EventArgs e)
         {
-            string login, heslo, potvrzeniHesla;
+            string login, heslo, potvrzeniHesla,email;
 
             login = textBoxLogin.Text;
             heslo = textBoxHeslo.Text;
+            email = textBoxEmail.Text; 
             potvrzeniHesla = textBoxPotvrzeni.Text;
 
 
@@ -92,7 +94,7 @@ namespace Projekt
                 else 
                 {
 
-                    String querry = "INSERT INTO  Login VALUES ('" + textBoxLogin.Text + "' ,'" + textBoxHeslo.Text + "')";
+                    String querry = "INSERT INTO  Login VALUES ('" + textBoxLogin.Text + "' ,'" + textBoxHeslo.Text + "','" + textBoxEmail.Text + "')";
                     SqlDataAdapter adapter = new SqlDataAdapter(querry, con);
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
@@ -121,6 +123,11 @@ namespace Projekt
                 
 
             }
+        }
+
+        private void formRegistrace_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

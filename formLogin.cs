@@ -9,6 +9,7 @@ using static System.Windows.Forms.DataFormats;
 using System.Data.SqlClient;
 using System.Data.Common;
 using System.Security.Cryptography.X509Certificates;
+using System.ComponentModel.DataAnnotations;
 
 namespace Projekt
 {
@@ -17,7 +18,8 @@ namespace Projekt
         private const int WM_NCHITTEST = 0x84;
         private const int HTCLIENT = 0x1;
         private const int HTCAPTION = 0x2;
-
+        SqlCommand cmd;
+        SqlDataAdapter adapter;
         ///
         /// Handling the window messages
         ///
@@ -37,7 +39,7 @@ namespace Projekt
         }
         //Připojení k databázi ********************************************
         SqlConnection con = new SqlConnection(@"Data Source=TOMAS;Initial Catalog=Projekt;Integrated Security=True");
-
+        
         
        
         private void buttonPrihlas_Click(object sender, EventArgs e)
@@ -45,26 +47,28 @@ namespace Projekt
             
            
 
-            String login, heslo;
+            String login, heslo,email;
             login = textBoxLogin.Text;
             heslo = textBoxHeslo.Text;
 
             try
-            {
-                String querry = "SELECT * FROM  Login WHERE login = '" + textBoxLogin.Text + "' AND heslo='" + textBoxHeslo.Text + "'";
-                SqlDataAdapter adapter = new SqlDataAdapter(querry, con);
-
+            { 
+                String querry =  "SELECT * FROM  Login WHERE login = '" + textBoxLogin.Text + "' AND heslo='" + textBoxHeslo.Text + "'";
+                SqlDataAdapter adapter = new SqlDataAdapter(querry,con);
+                
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
 
                 if (dt.Rows.Count > 0)
                 {
+                    
                     login = textBoxLogin.Text;
                     heslo = textBoxHeslo.Text;
-
+                    
                     Uzivatel.Login=login;
                     Uzivatel.Heslo=heslo;
-                   
+                    
+              
 
 
                     Form1 nextForm = new Form1();

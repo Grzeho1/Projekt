@@ -37,6 +37,8 @@
             this.tlacitkoRegistruj = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.labelError = new System.Windows.Forms.Label();
+            this.labelEmail = new System.Windows.Forms.Label();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -105,7 +107,7 @@
             this.tlacitkoRegistruj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tlacitkoRegistruj.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tlacitkoRegistruj.ForeColor = System.Drawing.Color.SteelBlue;
-            this.tlacitkoRegistruj.Location = new System.Drawing.Point(89, 276);
+            this.tlacitkoRegistruj.Location = new System.Drawing.Point(89, 316);
             this.tlacitkoRegistruj.Name = "tlacitkoRegistruj";
             this.tlacitkoRegistruj.Size = new System.Drawing.Size(159, 41);
             this.tlacitkoRegistruj.TabIndex = 3;
@@ -139,6 +141,27 @@
             this.labelError.Size = new System.Drawing.Size(0, 21);
             this.labelError.TabIndex = 5;
             // 
+            // labelEmail
+            // 
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelEmail.ForeColor = System.Drawing.Color.SteelBlue;
+            this.labelEmail.Location = new System.Drawing.Point(42, 228);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(230, 37);
+            this.labelEmail.TabIndex = 0;
+            this.labelEmail.Text = "Email (nepovinné)";
+            // 
+            // textBoxEmail
+            // 
+            this.textBoxEmail.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBoxEmail.Location = new System.Drawing.Point(42, 268);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.PasswordChar = '*';
+            this.textBoxEmail.Size = new System.Drawing.Size(267, 23);
+            this.textBoxEmail.TabIndex = 3;
+            this.textBoxEmail.UseSystemPasswordChar = true;
+            // 
             // formRegistrace
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -148,15 +171,18 @@
             this.Controls.Add(this.labelError);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tlacitkoRegistruj);
+            this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.textBoxPotvrzeni);
             this.Controls.Add(this.textBoxHeslo);
             this.Controls.Add(this.textBoxLogin);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelEmail);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formRegistrace";
             this.Text = "formRegistrace";
+            this.Load += new System.EventHandler(this.formRegistrace_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,5 +199,7 @@
         private Button tlacitkoRegistruj;
         private Button button1;
         private Label labelError;
+        private Label labelEmail;
+        private TextBox textBoxEmail;
     }
 }

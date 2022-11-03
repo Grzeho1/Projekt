@@ -133,7 +133,9 @@ namespace Projekt
             formNastaveni.FormBorderStyle = FormBorderStyle.None;
             this.panelHlavni.Controls.Add(formNastaveni);
             formNastaveni.Show();   
+
         }
+      
 
         private void tlacitkoKalendar_Click(object sender, EventArgs e)
         {
@@ -150,22 +152,20 @@ namespace Projekt
             tlacitkoKalendar.BackColor = Color.FromArgb(24, 30, 54);
         }
 
+
         private void tlacitkoNastaveni_Leave(object sender, EventArgs e)
         {
             tlacitkoNastaveni.BackColor = Color.FromArgb(24, 30, 54);
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
+        
 
-        }
-
-        private void tlacitkoKrypto_Click(object sender, EventArgs e)
+        private void tlacitkoMail_Click(object sender, EventArgs e)
         {
-            panelNavigace.Height = tlacitkoNastaveni.Height;
-            panelNavigace.Top = tlacitkoNastaveni.Top;
-            panelNavigace.Left = tlacitkoNastaveni.Left;
-            tlacitkoNastaveni.BackColor = Color.FromArgb(46, 51, 73);
+            panelNavigace.Height = tlacitkoMail.Height;
+            panelNavigace.Top = tlacitkoMail.Top;
+            panelNavigace.Left = tlacitkoMail.Left;
+            tlacitkoMail.BackColor = Color.FromArgb(46, 51, 73);
 
             labelNazev.Text = "Email";
             this.panelHlavni.Controls.Clear();
@@ -175,14 +175,18 @@ namespace Projekt
             formMail.Show();
         }
 
-        private void tlacitkoKrypto_Leave(object sender, EventArgs e)
+        private void tlacitkoMail_Leave(object sender, EventArgs e)
         {
-            tlacitkoKrypto.BackColor = Color.FromArgb(24, 30, 54);
+            tlacitkoMail.BackColor = Color.FromArgb(24, 30, 54);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
     

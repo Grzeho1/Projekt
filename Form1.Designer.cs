@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tlacitkoKrypto = new System.Windows.Forms.Button();
+            this.tlacitkoMail = new System.Windows.Forms.Button();
             this.panelNavigace = new System.Windows.Forms.Panel();
             this.tlacitkoNastaveni = new System.Windows.Forms.Button();
             this.tlacitkoKalendar = new System.Windows.Forms.Button();
@@ -51,7 +51,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.panel1.Controls.Add(this.tlacitkoKrypto);
+            this.panel1.Controls.Add(this.tlacitkoMail);
             this.panel1.Controls.Add(this.panelNavigace);
             this.panel1.Controls.Add(this.tlacitkoNastaveni);
             this.panel1.Controls.Add(this.tlacitkoKalendar);
@@ -65,24 +65,24 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // tlacitkoKrypto
+            // tlacitkoMail
             // 
-            this.tlacitkoKrypto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tlacitkoKrypto.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tlacitkoKrypto.FlatAppearance.BorderSize = 0;
-            this.tlacitkoKrypto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tlacitkoKrypto.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tlacitkoKrypto.ForeColor = System.Drawing.Color.SteelBlue;
-            this.tlacitkoKrypto.Image = ((System.Drawing.Image)(resources.GetObject("tlacitkoKrypto.Image")));
-            this.tlacitkoKrypto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tlacitkoKrypto.Location = new System.Drawing.Point(0, 412);
-            this.tlacitkoKrypto.Name = "tlacitkoKrypto";
-            this.tlacitkoKrypto.Size = new System.Drawing.Size(181, 63);
-            this.tlacitkoKrypto.TabIndex = 3;
-            this.tlacitkoKrypto.Text = "Mail";
-            this.tlacitkoKrypto.UseVisualStyleBackColor = true;
-            this.tlacitkoKrypto.Click += new System.EventHandler(this.tlacitkoKrypto_Click);
-            this.tlacitkoKrypto.Leave += new System.EventHandler(this.tlacitkoKrypto_Leave);
+            this.tlacitkoMail.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tlacitkoMail.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tlacitkoMail.FlatAppearance.BorderSize = 0;
+            this.tlacitkoMail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tlacitkoMail.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tlacitkoMail.ForeColor = System.Drawing.Color.SteelBlue;
+            this.tlacitkoMail.Image = ((System.Drawing.Image)(resources.GetObject("tlacitkoMail.Image")));
+            this.tlacitkoMail.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tlacitkoMail.Location = new System.Drawing.Point(0, 412);
+            this.tlacitkoMail.Name = "tlacitkoMail";
+            this.tlacitkoMail.Size = new System.Drawing.Size(181, 63);
+            this.tlacitkoMail.TabIndex = 3;
+            this.tlacitkoMail.Text = "Mail";
+            this.tlacitkoMail.UseVisualStyleBackColor = true;
+            this.tlacitkoMail.Click += new System.EventHandler(this.tlacitkoMail_Click);
+            this.tlacitkoMail.Leave += new System.EventHandler(this.tlacitkoMail_Leave);
             // 
             // panelNavigace
             // 
@@ -285,7 +285,7 @@
         private Label labelNazev;
         private Panel panelHlavni;
         private Label labelJmeno;
-        private Button tlacitkoKrypto;
+        private Button tlacitkoMail;
         private Button tlacitkoExit;
     }
 }

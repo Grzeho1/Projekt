@@ -67,7 +67,7 @@ namespace Projekt
                     
                     Uzivatel.Login=login;
                     Uzivatel.Heslo=heslo;
-                   
+                    getEmail(login);
 
 
 
@@ -76,7 +76,7 @@ namespace Projekt
                     nextForm.ShowDialog();
                     this.Close();
 
-                    getEmail(textBoxLogin.Text);
+                    
 
 
                 }
@@ -116,6 +116,7 @@ namespace Projekt
 
             while (sReader.Read())
             {
+
                 Uzivatel.Email = sReader["email"].ToString(); 
 
                 

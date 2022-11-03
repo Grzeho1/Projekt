@@ -54,7 +54,7 @@ namespace Projekt
             this.panelHlavni.Controls.Add(formDomu);
             formDomu.Show();
 
-            
+
 
         }
         
@@ -98,13 +98,12 @@ namespace Projekt
         private void tlacitkoTodo_Click(object sender, EventArgs e)
         {
 
+
+
             panelNavigace.Height = tlacitkoTodo.Height;
             panelNavigace.Top = tlacitkoTodo.Top;
             panelNavigace.Left = tlacitkoTodo.Left;
             tlacitkoTodo.BackColor = Color.FromArgb(46, 51, 73);
-
-
-
 
             labelNazev.Text = "ToDo";
             this.panelHlavni.Controls.Clear();
@@ -112,6 +111,8 @@ namespace Projekt
             formTodo.FormBorderStyle = FormBorderStyle.None;
             this.panelHlavni.Controls.Add(formTodo);
             formTodo.Show();
+
+
         }
 
         private void tlacitkoTodo_Leave(object sender, EventArgs e)

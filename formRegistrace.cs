@@ -78,7 +78,7 @@ namespace Projekt
 
                     if (checkLogin() == true)
                     {
-                        labelError.Text = "Uzivatel uz existuje";
+                        labelError.Text = "Uživatel uz existuje";
                     }
                     else if(login == "" || heslo == "")
                     {

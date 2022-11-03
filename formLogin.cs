@@ -18,11 +18,11 @@ namespace Projekt
         private const int WM_NCHITTEST = 0x84;
         private const int HTCLIENT = 0x1;
         private const int HTCAPTION = 0x2;
-        SqlCommand cmd;
-        SqlDataAdapter adapter;
+
         ///
-        /// Handling the window messages
+        /// 
         ///
+
         protected override void WndProc(ref Message message)
         {
             base.WndProc(ref message);
@@ -47,15 +47,15 @@ namespace Projekt
             
            
 
-            String login, heslo,email;
+            String login, heslo;
             login = textBoxLogin.Text;
             heslo = textBoxHeslo.Text;
 
             try
-            { 
-                String querry =  "SELECT * FROM  Login WHERE login = '" + textBoxLogin.Text + "' AND heslo='" + textBoxHeslo.Text + "'";
-                SqlDataAdapter adapter = new SqlDataAdapter(querry,con);
-                
+            {
+                String querry = "SELECT * FROM  Login WHERE login = '" + textBoxLogin.Text + "' AND heslo='" + textBoxHeslo.Text + "'";
+                SqlDataAdapter adapter = new SqlDataAdapter(querry, con);
+
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
 
@@ -67,8 +67,8 @@ namespace Projekt
                     
                     Uzivatel.Login=login;
                     Uzivatel.Heslo=heslo;
-                    
-              
+                   
+
 
 
                     Form1 nextForm = new Form1();
@@ -76,6 +76,7 @@ namespace Projekt
                     nextForm.ShowDialog();
                     this.Close();
 
+                    getEmail(textBoxLogin.Text);
 
 
                 }
@@ -96,6 +97,30 @@ namespace Projekt
 
             //Připojení k databázi ********************************************
 
+        }
+
+
+            // Slouží k předvyplnění Mailu odesílatele
+        private void getEmail(string key)
+        {
+            
+            con.Open();
+            string sqlquery = "SELECT * FROM Login WHERE login = @login";
+
+            SqlCommand command = new SqlCommand(sqlquery, con);
+            SqlDataReader sReader;
+
+            command.Parameters.Clear();
+            command.Parameters.AddWithValue("@login", key);
+            sReader = command.ExecuteReader();
+
+            while (sReader.Read())
+            {
+                Uzivatel.Email = sReader["email"].ToString(); 
+
+                
+            }
+            con.Close();
         }
 
 
